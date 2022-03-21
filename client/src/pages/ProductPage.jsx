@@ -9,6 +9,9 @@ import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
 import Rating from "../components/Rating";
 import { Helmet } from "react-helmet-async";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+import { getError } from "../utils";
 
 //Reducer function
 const reducer = (state, action) => {
@@ -49,7 +52,8 @@ const ProductPage = () => {
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
         console.log(result.data);
       } catch (error) {
-        dispatch({ type: "FETCH_FAILURE", payload: error.message });
+        // dispatch({ type: "FETCH_FAILURE", payload: error.message });
+        dispatch({ type: "FETCH_FAILURE", payload: getError(error) });
       }
     };
 
@@ -57,9 +61,9 @@ const ProductPage = () => {
   }, [slug]);
 
   return loading ? (
-    <div>Loading...</div>
+    <LoadingBox />
   ) : error ? (
-    <div>{error}</div>
+    <MessageBox variant="danger">{error}</MessageBox>
   ) : (
     <div>
       <Row>
