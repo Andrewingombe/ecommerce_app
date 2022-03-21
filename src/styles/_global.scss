@@ -1,0 +1,13 @@
+@use "variables";
+
+body {
+  background-color: variables.$bg;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
