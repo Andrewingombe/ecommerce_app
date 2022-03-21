@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { useEffect, useState } from "react";
 import { useEffect, useReducer } from "react";
 import axios from "axios";
@@ -7,6 +7,7 @@ import logger from "use-reducer-logger";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Product from "../components/Product";
+import { Helmet } from "react-helmet-async";
 
 //Reducer function
 const reducer = (state, action) => {
@@ -41,7 +42,6 @@ const HomePage = () => {
       try {
         const result = await axios.get("http://localhost:5000/api/products");
         dispatch({ type: "FETCH_SUCCESS", payload: result.data });
-        console.log(result.data);
       } catch (error) {
         dispatch({ type: "FETCH_FAILURE", payload: error.message });
       }
@@ -54,6 +54,9 @@ const HomePage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Drecbit</title>
+      </Helmet>
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (

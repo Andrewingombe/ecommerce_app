@@ -13,13 +13,13 @@ const App = () => {
           <Navbar bg="dark" variant="dark">
             <Container>
               <LinkContainer to={"/"}>
-                <Navbar.Brand>drecbit</Navbar.Brand>
+                <Navbar.Brand>Drecbit</Navbar.Brand>
               </LinkContainer>
             </Container>
           </Navbar>
         </header>
         <main>
-          <Container>
+          <Container className="mt-3">
             <Routes>
               <Route path="/product/:slug" element={<ProductPage />} />
               <Route path="/" element={<HomePage />} />
