@@ -31,6 +31,15 @@ body {
 main {
   flex: 1;
 
+  .btn-primary {
+    background-color: var(--clr-gold);
+    color: var(--clr-white);
+  }
+
+  .rating {
+    color: var(--clr-gold);
+  }
+
   .products {
     display: flex;
     flex-wrap: wrap;
