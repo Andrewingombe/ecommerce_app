@@ -3,8 +3,10 @@ import Home from "./Home";
 const App = () => {
   return (
     <div>
-      <header className="hero"></header>
-      <Home />
+      <section className="hero"></section>
+      <main>
+        <Home />
+      </main>
     </div>
   );
 };

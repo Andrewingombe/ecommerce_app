@@ -1,3 +1,7 @@
 .hero {
-  background-image: url("../images/andrew_ingombe-min.jpg");
+  background: url("../images/webpack_logo.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
 }

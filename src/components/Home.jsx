@@ -1,7 +1,11 @@
+import webpackLogo from "../images/webpack_logo.png";
+
 const Home = () => {
   return (
     <div>
-      <h1>Hello from the Home component</h1>
+      <h1>Webpack Module Bundler & Transpiler</h1>
+      <hr />
+      <img className="image" src={webpackLogo} alt="webpack logo" />
     </div>
   );
 };
