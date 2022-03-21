@@ -10,14 +10,15 @@ if (process.env.NODE_ENV === "production") {
 
 module.exports = {
   mode: mode,
+  entry: "./src/index.js",
   output: {
-    assetModuleFilename: "images/[hash][ext][query]",
     path: path.resolve(__dirname, "dist"),
+    filename: "[name].bundle.js",
   },
   module: {
     rules: [
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpe?g|gif)$/i,
         type: "asset/resource",
       },
       {

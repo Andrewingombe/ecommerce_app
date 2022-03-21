@@ -1,0 +1,49 @@
+@use "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+*,
+*::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  background-color: var(--clr-dark);
+  padding: 1rem;
+
+  a {
+    color: var(--clr-white);
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+main {
+  padding: 1rem;
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .product {
+      border: 1px solid #404040;
+      margin: 1rem;
+
+      & img {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .product-info {
+        padding: 1rem;
+      }
+    }
+  }
+}
