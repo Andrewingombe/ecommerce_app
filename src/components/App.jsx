@@ -1,11 +1,9 @@
-import Home from "./Home";
-
 const App = () => {
   return (
     <div>
       <section className="hero"></section>
       <main>
-        <Home />
+        <h1>MERN Ecommerce Website</h1>
       </main>
     </div>
   );
