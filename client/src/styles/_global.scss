@@ -13,19 +13,23 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-header {
-  background-color: var(--clr-dark);
-  padding: 1rem;
+// header {
+//   background-color: var(--clr-dark);
+//   padding: 1rem;
 
-  a {
-    color: var(--clr-white);
-    font-weight: bold;
-    text-decoration: none;
-  }
+//   a {
+//     color: var(--clr-white);
+//     font-weight: bold;
+//     text-decoration: none;
+//   }
+// }
+
+.site-container {
+  min-height: 100vh;
 }
 
 main {
-  padding: 1rem;
+  flex: 1;
 
   .products {
     display: flex;

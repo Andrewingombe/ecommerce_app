@@ -47,7 +47,10 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", "..."],
+    alias: {
+      images: path.resolve(__dirname, "src/images"),
+    },
   },
   devtool: "source-map",
   devServer: {
